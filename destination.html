@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon-32x32.png" />
+    <link rel="stylesheet" href=".css/main.css" />
+    <title>Destinations | Space Tourism</title>
+  </head>
+
+  <body class="destination-page">
+    <header class="header">
+      <svg
+        class="header__logo"
+        xmlns="http://www.w3.org/2000/svg"
+        width="48"
+        height="48"
+      >
+        <g fill="none" fill-rule="evenodd">
+          <circle cx="24" cy="24" r="24" fill="#FFF" />
+          <path
+            fill="#0B0D17"
+            d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"
+          />
+        </g>
+      </svg>
+
+      <nav class="header__nav">
+        <li><a href="index.html" class="header__link">00 Home</a></li>
+        <li>
+          <a href="destination.html" class="header__link">01 Destination</a>
+        </li>
+        <li><a href="crew.html" class="header__link">02 Crew</a></li>
+        <li><a href="#" class="header__link">03 Technology</a></li>
+      </nav>
+    </header>
+
+    <section class="destination-main">
+      <div class="destination-main__planet">
+        <h3 class="destination-main__planet--title">
+          <span class="destination-main__planet--span">01</span> Pick a
+          Destination
+        </h3>
+        <img
+          id="planets"
+          class="destination-main__planet--img"
+          src="/assets/destination/image-moon.png"
+          alt="Planet picture"
+        />
+      </div>
+
+      <div class="destination-main__info">
+        <nav class="header__nav destination-main__nav" id="planet-nav">
+          <li><a href="#" class="header__link" id="moon">Moon</a></li>
+          <li>
+            <a href="#" class="header__link" id="mars">Mars</a>
+          </li>
+          <li><a href="#" class="header__link" id="europa">Europa</a></li>
+          <li><a href="#" class="header__link" id="titan">Titan</a></li>
+        </nav>
+
+        <h1
+          class="main-content__secondary destination-main__planet-name"
+          id="planet-name"
+        >
+          moon
+        </h1>
+        <p class="destination-main__planet-info" id="planet-info">
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+
+        <div class="avg">
+          <div class="avg-dist">
+            <p class="avg-dist__avg">avg.distance</p>
+            <p class="avg-dist__dist-time" id="planet-distance">384,400 KM</p>
+          </div>
+          <div class="avg-dist">
+            <p class="avg-dist__avg">avg.travel time</p>
+            <p class="avg-dist__dist-time" id="planet-time">3 days</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="destination.js"></script>
+  </body>
+</html>

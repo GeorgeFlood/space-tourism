@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 10 px per 1rem;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.home-page {
+  @include defaultPage;
+  background-image: url(../assets/home/background-home-desktop.jpg);
+
+  @include respond(phone) {
+    background-image: url(../assets/home/background-home-mobile.jpg);
+  }
+
+  @include respond(tab-port) {
+    background-image: url(../assets/home/background-home-tablet.jpg);
+  }
+}
+
+.destination-page {
+  @include defaultPage;
+  background-image: url(../assets/destination/background-destination-desktop.jpg);
+
+  @include respond(phone) {
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+  }
+  @include respond(tab-port) {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+  }
+}
+
+.crew-page {
+  @include defaultPage;
+  background-image: url(/assets/crew/background-crew-desktop.jpg);
+
+  @include respond(phone) {
+    background-image: url(/assets/crew/background-crew-mobile.jpg);
+  }
+
+  @include respond(tab-port) {
+    background-image: url(/assets/crew/background-crew-tablet.jpg);
+  }
+}

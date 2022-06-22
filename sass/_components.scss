@@ -1,0 +1,369 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  margin-top: 5rem;
+
+  @include respond(tab-port) {
+  }
+
+  &__svg {
+  }
+
+  &__nav {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    font-size: 2rem;
+    padding: 4rem 8rem;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 55%;
+      height: 3px;
+      top: 50%;
+      left: -20%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(108, 106, 106);
+    }
+
+    &--hamburger {
+      display: none;
+
+      @include respond(tab-port) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__link,
+  &__link:link {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 4rem;
+    color: #fff;
+    position: relative;
+    font-weight: 400;
+    transition: all 0.5s;
+    transform-origin: right;
+
+    &:focus {
+      color: rgb(191, 189, 189);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 0%;
+      top: 6rem;
+      left: 0.2rem;
+      background-color: #fff;
+      opacity: 0;
+      transition: opacity 0.7s ease-in-out, width 0.7s ease-in-out;
+    }
+  }
+  &__link:hover::before {
+    opacity: 1;
+    width: 100%;
+    height: 8%;
+  }
+}
+
+///HOME PAGE TEXT COMPONENTS
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 19%;
+
+  @include respond(tab-port) {
+    margin-top: 30%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @include respond(phone) {
+    margin-top: 12%;
+  }
+
+  &__text {
+    display: column;
+    flex: 0 0 40%;
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+    }
+
+    @include respond(big-desk) {
+      flex: 0 0 20%;
+    }
+  }
+  &__primary {
+    color: rgb(175, 175, 175);
+    font-size: 3.4rem;
+    margin-bottom: 2rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+    }
+    @include respond(phone) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__secondary {
+    font-size: 11rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: $color-white;
+
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 7rem;
+    }
+  }
+
+  &__tetairy {
+    color: rgb(175, 175, 175);
+    font-size: 2.2rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+      padding: 0 4rem;
+    }
+  }
+
+  &__circle {
+    display: flex;
+    font-size: 3rem;
+    height: 23rem;
+    width: 23rem;
+    background-color: #fff;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: rgb(108, 106, 106);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    box-sizing: border-box;
+    transition: border 0.4s ease-in-out, width ease-in-out;
+
+    @include respond(tab-port) {
+      height: 19rem;
+      width: 19rem;
+    }
+
+    &:hover {
+      border: 11.5rem solid rgb(162, 162, 162);
+    }
+  }
+}
+
+/// DESTINATIONS PAGE
+
+.destination-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3%;
+
+  @include respond(big-desk) {
+    margin-top: 6%;
+  }
+
+  &__planet {
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+
+    &--title {
+      margin-left: 10rem;
+      font-size: 2.7rem;
+      text-transform: uppercase;
+      color: $color-white;
+
+      @include respond(big-desk) {
+        margin-left: 30rem;
+      }
+    }
+
+    &--span {
+      color: rgb(108, 106, 106);
+    }
+
+    &--img {
+      display: block;
+      margin: 0 auto;
+      margin-top: 10rem;
+      height: 44rem;
+      width: 44rem;
+    }
+  }
+
+  &__info {
+    height: 52rem;
+    width: 35%;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background: none;
+
+    &::before {
+      content: none;
+    }
+
+    & a {
+      color: rgb(155, 155, 155);
+
+      &:focus {
+        color: #fff;
+      }
+    }
+
+    ::before {
+      content: '';
+      width: 0%;
+      height: 0%;
+      transform: translateY(-2rem);
+      background-color: rgb(255, 255, 255);
+      opacity: 1;
+    }
+  }
+
+  &__planet-name {
+    margin-top: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__planet-info {
+    color: $color-white;
+    font-size: 1.6rem;
+    text-align: left;
+    padding: 0 4rem 5rem 4rem;
+    margin-top: 4rem;
+    line-height: 3rem;
+    border-bottom: 2px solid white;
+  }
+
+  @include respond(big-desk) {
+    padding: 0 30rem 5rem 30rem;
+  }
+}
+
+.avg {
+  display: flex;
+  color: white;
+  margin-top: 4rem;
+  text-align: center;
+
+  &-dist {
+    flex: 0 0 50%;
+    text-transform: uppercase;
+
+    &__avg {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      color: rgb(158, 156, 156);
+    }
+
+    &__dist-time {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+//// CREW
+
+.crew {
+  display: flex;
+  justify-content: space-around;
+
+  &__meet {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40%;
+    color: white;
+  }
+
+  &__rank {
+    margin-top: 25%;
+    font-size: 4rem;
+    color: rgb(108, 106, 106);
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__name {
+    font-size: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__info {
+    font-size: 1.8rem;
+    line-height: 3.3rem;
+    margin-bottom: 2rem;
+    color: rgb(215, 215, 215);
+  }
+
+  &__nav {
+    margin-top: 20%;
+    &--item:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &--item {
+      height: 1.8rem;
+      width: 1.8rem;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8%;
+        left: 8%;
+        width: 0;
+        height: 0;
+        background-color: rgb(161, 6, 6);
+        box-shadow: 0 0.3rem 9rem rgb(255, 255, 255);
+        border-radius: 50%;
+        transform: scale(0);
+        transition: height 0.4s ease-in-out, width 0.2s ease-in-out;
+      }
+      &:checked::before {
+        transform: scale(1);
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+  }
+
+  &__img {
+    flex: 0 0 40%;
+
+    &--port {
+      margin-top: 10%;
+    }
+  }
+}
