@@ -27,7 +27,7 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 55%;
       height: 3px;
@@ -62,7 +62,7 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 0%;
       height: 0%;
@@ -182,6 +182,10 @@
   align-items: center;
   margin-top: 3%;
 
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
   @include respond(big-desk) {
     margin-top: 6%;
   }
@@ -196,6 +200,11 @@
       font-size: 2.7rem;
       text-transform: uppercase;
       color: $color-white;
+
+      @include respond(tab-port) {
+        margin: 0;
+        text-align: center;
+      }
 
       @include respond(big-desk) {
         margin-left: 30rem;
@@ -212,12 +221,23 @@
       margin-top: 10rem;
       height: 44rem;
       width: 44rem;
+
+      @include respond(tab-port) {
+        margin: 5rem 0;
+        height: 40rem;
+        width: 40rem;
+      }
     }
   }
 
   &__info {
     height: 52rem;
     width: 35%;
+
+    @include respond(tab-port) {
+      width: 75%;
+      font-size: 3rem;
+    }
   }
 
   &__nav {
@@ -226,6 +246,9 @@
     padding: 0;
     margin: 0;
     background: none;
+
+    @include respond(tab-port) {
+    }
 
     &::before {
       content: none;
@@ -240,7 +263,7 @@
     }
 
     ::before {
-      content: '';
+      content: "";
       width: 0%;
       height: 0%;
       transform: translateY(-2rem);
@@ -303,6 +326,17 @@
     flex-direction: column;
     flex: 0 0 40%;
     color: white;
+
+    @include respond(big-desk) {
+      flex: 0 0 25%;
+      margin-top: 5%;
+    }
+  }
+
+  &__span {
+    @include respond(big-desk) {
+      margin: 0 auto;
+    }
   }
 
   &__rank {
@@ -317,6 +351,11 @@
     font-size: 5rem;
     padding-bottom: 2rem;
     text-align: center;
+
+    @include respond(big-desk) {
+      font-size: 5.5rem;
+      margin: 3rem 0;
+    }
   }
 
   &__info {
@@ -324,6 +363,10 @@
     line-height: 3.3rem;
     margin-bottom: 2rem;
     color: rgb(215, 215, 215);
+
+    @include respond(big-desk) {
+      font-size: 2.2rem;
+    }
   }
 
   &__nav {
@@ -339,17 +382,17 @@
       cursor: pointer;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 8%;
         left: 8%;
         width: 0;
         height: 0;
-        background-color: rgb(161, 6, 6);
+        background-color: rgb(7, 220, 78);
         box-shadow: 0 0.3rem 3rem rgb(255, 255, 255);
         border-radius: 50%;
         transform: scale(0);
-        transition: height 0.4s ease-in-out, width 0.2s ease-in-out;
+        transition: all 0.4s;
       }
       &:checked::before {
         transform: scale(1);
@@ -362,6 +405,11 @@
   &__img {
     flex: 0 0 40%;
     position: relative;
+
+    @include respond(big-desk) {
+      flex: 0 25%;
+      margin-top: 5%;
+    }
 
     &--port {
       margin-top: 10%;
@@ -384,6 +432,7 @@
 
   &-form {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     margin-left: 3%;
 
@@ -392,13 +441,13 @@
       width: 7rem;
 
       &:not(:last-child) {
-        margin-bottom: 2.5rem;
+        margin-bottom: 10rem;
       }
     }
   }
 
   &-info {
-    padding-left: 4rem;
+    padding-left: 5rem;
     flex: 0 0 30%;
     color: $color-white;
     hyphens: auto;
