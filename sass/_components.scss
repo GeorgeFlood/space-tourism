@@ -6,6 +6,7 @@
   margin-top: 5rem;
 
   @include respond(tab-port) {
+    margin-bottom: 5rem;
   }
 
   &__svg {
@@ -195,6 +196,10 @@
     flex-direction: column;
     width: 42%;
 
+    @include respond(phone) {
+      width: 100%;
+    }
+
     &--title {
       margin-left: 10rem;
       font-size: 2.7rem;
@@ -223,7 +228,7 @@
       width: 44rem;
 
       @include respond(tab-port) {
-        margin: 5rem 0;
+        margin: 5rem auto;
         height: 40rem;
         width: 40rem;
       }
@@ -235,7 +240,7 @@
     width: 35%;
 
     @include respond(tab-port) {
-      width: 75%;
+      width: 85%;
       font-size: 3rem;
     }
   }
@@ -430,15 +435,27 @@
   display: flex;
   align-items: center;
 
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+  }
+
   &-form {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     margin-left: 3%;
 
+    @include respond(tab-port) {
+      flex-direction: row;
+    }
+
     &__nav {
       height: 7rem;
       width: 7rem;
+
+      @include respond(tab-port) {
+        margin-top: 3rem;
+      }
 
       &:not(:last-child) {
         margin-bottom: 10rem;
@@ -452,6 +469,10 @@
     color: $color-white;
     hyphens: auto;
 
+    @include respond(phone) {
+      padding: 0 2rem;
+    }
+
     &__paragraph {
       font-size: 2.2rem;
       margin-bottom: 1.8rem;
@@ -462,6 +483,10 @@
       font-size: 5rem;
       margin-bottom: 2rem;
       font-weight: 700;
+
+      @include respond(tab-port) {
+        text-align: center;
+      }
     }
 
     &__info {
@@ -472,12 +497,20 @@
 
   &-image {
     margin-left: auto;
+    @include respond(tab-port) {
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
 
     &__image {
       height: 50rem;
       width: 50rem;
       border-radius: 4px;
       transition: all 0.4s ease-in;
+      @include respond(phone) {
+        height: 30rem;
+        width: 30rem;
+      }
       &:hover {
         transform: scale(1.02);
       }
