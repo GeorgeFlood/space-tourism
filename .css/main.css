@@ -26,6 +26,7 @@ html {
 @media (max-width: 56.25em) {
   .home-page {
     height: 100%;
+    overflow: visible;
   }
 }
 @media (max-width: 37.5em) {
@@ -50,6 +51,7 @@ html {
 @media (max-width: 56.25em) {
   .destination-page {
     height: 100%;
+    overflow: visible;
   }
 }
 @media (max-width: 37.5em) {
@@ -74,6 +76,7 @@ html {
 @media (max-width: 56.25em) {
   .crew-page {
     height: 100%;
+    overflow: visible;
   }
 }
 @media (max-width: 37.5em) {
@@ -98,6 +101,7 @@ html {
 @media (max-width: 56.25em) {
   .technology-page {
     height: 100%;
+    overflow: visible;
   }
 }
 @media (max-width: 37.5em) {
@@ -135,6 +139,9 @@ html {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
+.header__nav li:not(:last-child) {
+  margin-right: 4rem;
+}
 @media (max-width: 56.25em) {
   .header__nav {
     display: none;
@@ -156,12 +163,12 @@ html {
 @media (max-width: 56.25em) {
   .header__nav--hamburger {
     display: inline-block;
+    cursor: pointer;
   }
 }
 .header__link, .header__link:link {
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 4rem;
   color: #fff;
   position: relative;
   font-weight: 400;
@@ -281,6 +288,7 @@ html {
   .main-content__circle {
     height: 19rem;
     width: 19rem;
+    margin-bottom: 2rem;
   }
 }
 .main-content__circle:hover {
@@ -308,7 +316,7 @@ html {
   flex-direction: column;
   width: 42%;
 }
-@media (max-width: 37.5em) {
+@media (max-width: 56.25em) {
   .destination-main__planet {
     width: 100%;
   }
@@ -345,6 +353,12 @@ html {
     margin: 5rem auto;
     height: 40rem;
     width: 40rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .destination-main__planet--img {
+    height: 30rem;
+    width: 30rem;
   }
 }
 .destination-main__info {
@@ -395,6 +409,12 @@ html {
   line-height: 3rem;
   border-bottom: 2px solid white;
 }
+@media (max-width: 56.25em) {
+  .destination-main__planet-info {
+    text-align: center;
+    padding: 0;
+  }
+}
 @media (min-width: 112.5em) {
   .destination-main {
     padding: 0 30rem 5rem 30rem;
@@ -424,6 +444,11 @@ html {
   display: flex;
   justify-content: space-around;
 }
+@media (max-width: 56.25em) {
+  .crew {
+    flex-direction: column-reverse;
+  }
+}
 .crew__meet {
   display: flex;
   flex-direction: column;
@@ -448,6 +473,11 @@ html {
   padding-bottom: 2rem;
   text-align: center;
 }
+@media (max-width: 56.25em) {
+  .crew__rank {
+    margin-top: 10%;
+  }
+}
 .crew__name {
   font-size: 5rem;
   padding-bottom: 2rem;
@@ -465,6 +495,12 @@ html {
   margin-bottom: 2rem;
   color: rgb(215, 215, 215);
 }
+@media (max-width: 56.25em) {
+  .crew__info {
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
 @media (min-width: 112.5em) {
   .crew__info {
     font-size: 2.2rem;
@@ -472,6 +508,11 @@ html {
 }
 .crew__nav {
   margin-top: 20%;
+}
+@media (max-width: 56.25em) {
+  .crew__nav {
+    margin: 10% auto 2rem auto;
+  }
 }
 .crew__nav--item:not(:last-child) {
   margin-right: 2rem;
@@ -517,6 +558,21 @@ html {
   top: 0;
   left: 0;
 }
+@media (max-width: 56.25em) {
+  .crew__img--port {
+    height: 50rem;
+    width: 50rem;
+    display: flex;
+    position: relative;
+    margin: 10% auto 5rem auto;
+  }
+}
+@media (max-width: 37.5em) {
+  .crew__img--port {
+    height: 30rem;
+    width: 30rem;
+  }
+}
 .crew__img--port:hover {
   top: -1rem;
 }
@@ -529,6 +585,11 @@ html {
 @media (max-width: 56.25em) {
   .technology {
     flex-direction: column-reverse;
+  }
+}
+@media (min-width: 112.5em) {
+  .technology {
+    margin: 5% 10%;
   }
 }
 .technology-form {
