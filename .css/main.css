@@ -164,6 +164,7 @@ html {
   .header__nav--hamburger {
     display: inline-block;
     cursor: pointer;
+    z-index: 1000000000000;
   }
 }
 .header__link, .header__link:link {
@@ -670,4 +671,53 @@ html {
 }
 .technology-image__image:hover {
   transform: scale(1.02);
+}
+
+.mobile-nav {
+  position: fixed;
+  display: flex;
+  top: 0%;
+  left: 0;
+  transform: translateX(200%);
+  height: 100vh;
+  width: 75vw;
+  background-color: rgba(62, 62, 62, 0.85);
+  color: white;
+  font-size: 3rem;
+  transition: all 0.4s ease-in-out;
+  z-index: 100000;
+}
+@media (max-width: 37.5em) {
+  .mobile-nav {
+    transform: translateX(300%);
+  }
+}
+.mobile-nav__items {
+  list-style: none;
+  margin: auto;
+  font-weight: 700;
+}
+.mobile-nav__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 5rem;
+  font-style: none;
+  text-decoration: none;
+  color: #fff;
+  z-index: 50000;
+}
+.mobile-nav--active {
+  transform: translateX(50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  font-weight: 700;
+}
+@media (max-width: 37.5em) {
+  .mobile-nav--active {
+    transform: translateX(40%);
+  }
 }/*# sourceMappingURL=main.css.map */

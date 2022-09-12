@@ -2,6 +2,18 @@ const techNav = document.querySelector("#tech-nav");
 const techTitle = document.querySelector("#tech-title");
 const techInfo = document.querySelector("#tech-info");
 const techImg = document.querySelector("#tech-img");
+const headerHamBurger = document.querySelector(".header__nav--hamburger");
+const mobileNav = document.querySelector(".mobile-nav");
+
+headerHamBurger.addEventListener("click", (e) => {
+  mobileNav.classList.toggle("mobile-nav--active");
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target.classList.contains("mobile-nav__item")) {
+    mobileNav.classList.remove("mobile-nav--active");
+  }
+});
 
 techNav.addEventListener("click", (e) => {
   const id = e.target.id;
