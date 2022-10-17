@@ -71,7 +71,7 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(/assets/crew/background-crew-desktop.jpg);
+  background-image: url(../assets/crew/background-crew-desktop.jpg);
 }
 @media (max-width: 56.25em) {
   .crew-page {
@@ -81,12 +81,12 @@ html {
 }
 @media (max-width: 37.5em) {
   .crew-page {
-    background-image: url(/assets/crew/background-crew-mobile.jpg);
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
   }
 }
 @media (max-width: 56.25em) {
   .crew-page {
-    background-image: url(/assets/crew/background-crew-tablet.jpg);
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
   }
 }
 
@@ -96,7 +96,7 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(/assets/technology/background-technology-desktop.jpg);
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
 }
 @media (max-width: 56.25em) {
   .technology-page {
@@ -106,12 +106,12 @@ html {
 }
 @media (max-width: 37.5em) {
   .technology-page {
-    background-image: url(/assets/technology/background-technology-mobile.jpg);
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
   }
 }
 @media (max-width: 56.25em) {
   .technology-page {
-    background-image: url(/assets/technology/background-technology-tablet.jpg);
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
   }
 }
 
@@ -137,7 +137,7 @@ html {
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.05);
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .header__nav li:not(:last-child) {
   margin-right: 4rem;
@@ -167,7 +167,8 @@ html {
     z-index: 1000000000000;
   }
 }
-.header__link, .header__link:link {
+.header__link,
+.header__link:link {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
@@ -176,10 +177,12 @@ html {
   transition: all 0.5s;
   transform-origin: right;
 }
-.header__link:focus, .header__link:link:focus {
+.header__link:focus,
+.header__link:link:focus {
   color: rgb(191, 189, 189);
 }
-.header__link::before, .header__link:link::before {
+.header__link::before,
+.header__link:link::before {
   content: "";
   position: absolute;
   width: 0%;
@@ -621,8 +624,8 @@ html {
   flex: 0 0 30%;
   color: #fff;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 @media (max-width: 37.5em) {
   .technology-info {
@@ -720,4 +723,4 @@ html {
   .mobile-nav--active {
     transform: translateX(40%);
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
