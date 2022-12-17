@@ -678,7 +678,7 @@ html {
 
 .mobile-nav {
   position: fixed;
-  display: flex;
+  display: none;
   top: 0%;
   left: 0;
   transform: translateX(200%);
@@ -692,6 +692,7 @@ html {
 }
 @media (max-width: 37.5em) {
   .mobile-nav {
+    display: flex;
     transform: translateX(300%);
   }
 }
